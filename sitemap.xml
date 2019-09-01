@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sopping.github.io/2018/07/02/2018-07-02-rxjava-thread-exchange/</loc>
+    
+    <lastmod>2019-09-01T08:59:24.931Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sopping.github.io/googlefc20d2456b4334c9.html</loc>
     
     <lastmod>2019-09-01T08:41:01.032Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://sopping.github.io/2019/08/10/2019-08-10-java8-functional-program/</loc>
     
     <lastmod>2019-09-01T07:56:13.568Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sopping.github.io/2018/07/02/2018-07-02-rxjava-thread-exchange/</loc>
-    
-    <lastmod>2019-09-01T06:49:13.134Z</lastmod>
     
   </url>
   

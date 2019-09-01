@@ -12,3 +12,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: https://hoxis.github.io/sitemap.xml
+Sitemap: https://hoxis.github.io/baidusitemap.xml
