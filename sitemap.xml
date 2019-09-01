@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sopping.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-09-01T09:45:43.342Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sopping.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-09-01T09:45:14.301Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sopping.github.io/about/index.html</loc>
+    
+    <lastmod>2019-09-01T09:43:48.650Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sopping.github.io/2019/03/28/2019-03-28-presale-threshold/</loc>
     
     <lastmod>2019-09-01T09:34:39.192Z</lastmod>
