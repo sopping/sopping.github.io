@@ -233,7 +233,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-01 15:56:13" itemprop="dateModified" datetime="2019-09-01T15:56:13+08:00">2019-09-01</time>
+                <time title="修改时间：2019-09-01 17:32:30" itemprop="dateModified" datetime="2019-09-01T17:32:30+08:00">2019-09-01</time>
               </span>
             
           
@@ -243,7 +243,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java8-函数式/" itemprop="url" rel="index"><span itemprop="name">Java8 函数式</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java8/" itemprop="url" rel="index"><span itemprop="name">Java8</span></a></span>
 
                 
                 
@@ -489,7 +489,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-01 17:29:21" itemprop="dateModified" datetime="2019-09-01T17:29:21+08:00">2019-09-01</time>
+                <time title="修改时间：2019-09-01 17:34:39" itemprop="dateModified" datetime="2019-09-01T17:34:39+08:00">2019-09-01</time>
               </span>
             
           
@@ -499,7 +499,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/业务-预售-预推送/" itemprop="url" rel="index"><span itemprop="name">业务 预售 预推送</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/业务/" itemprop="url" rel="index"><span itemprop="name">业务</span></a></span>
 
                 
                 
@@ -669,11 +669,13 @@
 <li>用户退货：实质也是入库操作，<strong>可发货库存</strong>值增加</li>
 <li>预售放行：<strong>可发货库存</strong>值减少，实质就是出库操作，只是预推送把出库操作前移到了放行阶段</li>
 <li>下单：不影响仓库<strong>可发货库存</strong></li>
-<li>预售库存变更：不影响仓库<strong>可发货库存</strong><br>所以我们可以在预售开启时初始化一个阈值，然后在后续的相关操作中更新这个阈值，这样就不存在计算逻辑了。<br>主要流程如下：<br><img src="http://pfp.ps.netease.com/kmspvt/file/5c9cd5a52dcadeedc83fec1dQrreLAst01?sign=jVIrCh6tYloINJPF4pVuLhRoiFo=&expire=1567347617" alt="预售拦截和放行新逻辑.png"><br>目前线上已ABtest，预计大促后正式过渡到此方案<h2 id="4-来世"><a href="#4-来世" class="headerlink" title="4. 来世"></a>4. 来世</h2>上个方案能解决预售阈值不准的问题，但是目前的预售仍然存在缺陷<blockquote>
+<li>预售库存变更：不影响仓库<strong>可发货库存</strong></li>
+</ol>
+<p>所以我们可以在预售开启时初始化一个阈值，然后在后续的相关操作中更新这个阈值，这样就不存在计算逻辑了。<br>主要流程如下：<br><img src="http://pfp.ps.netease.com/kmspvt/file/5c9cd5a52dcadeedc83fec1dQrreLAst01?sign=jVIrCh6tYloINJPF4pVuLhRoiFo=&expire=1567347617" alt="预售拦截和放行新逻辑.png"><br>目前线上已ABtest，预计大促后正式过渡到此方案</p>
+<h2 id="4-来世"><a href="#4-来世" class="headerlink" title="4. 来世"></a>4. 来世</h2><p>上个方案能解决预售阈值不准的问题，但是目前的预售仍然存在缺陷</p>
+<blockquote>
 <p>预售开启即定仓，不支持按照实际入库情况灵活调配，造成时效浪费</p>
 </blockquote>
-</li>
-</ol>
 <p><img src="http://pfp.ps.netease.com/kmspvt/file/5c9cd5b12dcadeedc83fec2ax2pGg3QE01?sign=mddUeGxCiZJPain7caADGV4CYa4=&expire=1567347617" alt="预售定仓-时效浪费.png"></p>
 <p>产品大大提出了预售不定仓的解决方案<br><img src="http://pfp.ps.netease.com/kmspvt/file/5c9cd5ba2dcadeedc83fec2fRG9trdyE01?sign=Isz4xvA0dpYU0H_afDfx4PW4xJ8=&expire=1567347617" alt="不定仓方案.png"><br>实际流程如下：<br><img src="http://pfp.ps.netease.com/kmspvt/file/5c9cd5c42dcadeedc83fec36gZvKh3rd01?sign=tPvXDNEI90HNRsPRlV1qF2ooNlA=&expire=1567347617" alt="不定仓流程.png"></p>
 <h2 id="5-预付定金"><a href="#5-预付定金" class="headerlink" title="5. 预付定金"></a>5. 预付定金</h2><p>第一个方案中，预付定金限制模式非预售时，需要特殊处理<br><img src="http://pfp.ps.netease.com/kmspvt/file/5c9cd5cf68d864b4ac69d3ffby3VtRJp01?sign=WnbNC5TA9uVMVrYF6Jdfyt5hurc=&expire=1567347617" alt="预付定金.png"><br>因为：</p>
@@ -682,7 +684,6 @@
 <li>中途开启预售，不能影响之前预付定金订单，即之前的订单不能作为预售拦截</li>
 <li>预售阈值计算时，得将之前的预付定金订单的占用库存排除，保证这些预付定金订单能正常发货</li>
 </ol>
-<h2 id="P-S"><a href="#P-S" class="headerlink" title="P.S"></a>P.S</h2><p>本文章大量借鉴了李文蕾的预售业务逻辑培训文档，有预售相关问题欢迎讨论~</p>
 
         
       
@@ -747,7 +748,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-01 16:59:24" itemprop="dateModified" datetime="2019-09-01T16:59:24+08:00">2019-09-01</time>
+                <time title="修改时间：2019-09-01 17:32:28" itemprop="dateModified" datetime="2019-09-01T17:32:28+08:00">2019-09-01</time>
               </span>
             
           
@@ -940,6 +941,15 @@
         
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
         
       </div>
     
